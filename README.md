@@ -77,16 +77,6 @@ Luma/
 │   ├── data/             # CSV datasets from InfluxDB
 │   └── notebooks/        # Jupyter analysis notebooks
 │
-├── hardware/             # Physical design files
-│   ├── circuit_diagram.pdf  # Wiring schematic
-│   ├── bom.csv           # Bill of materials
-│   └── assembly_guide.md # Build instructions
-│
-├── docs/                 # Documentation
-│   ├── final_report.pdf  # Complete coursework report
-│   ├── IOS_SETUP.md      # iOS build instructions
-│   └── api_documentation.md  # BLE protocol specs
-│
 ├── tests/                # Unit tests
 │   ├── firmware/         # ESP32 tests (PlatformIO)
 │   └── ios/              # Swift tests (XCTest)
