@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+  Info.plist Template for NavHalo Pilot
+  
+  IMPORTANT: Modern Xcode projects (Xcode 13+) don't use Info.plist for these settings.
+  Instead, add these permissions in Xcode:
+  
+  1. Select Project → Target → Info tab
+  2. Add "Custom iOS Target Properties"
+  3. Add the privacy descriptions below
+  
+  This file is provided as reference only.
+-->
+<plist version="1.0">
+<dict>
+    <!-- Bluetooth Permissions -->
+    <key>NSBluetoothAlwaysUsageDescription</key>
+    <string>NavHalo needs Bluetooth to connect to your smart helmet and collect safety data.</string>
+    
+    <key>NSBluetoothPeripheralUsageDescription</key>
+    <string>NavHalo needs Bluetooth to communicate with your helmet's sensors.</string>
+    
+    <!-- App Information -->
+    <key>CFBundleDisplayName</key>
+    <string>NavHalo Pilot</string>
+    
+    <key>CFBundleShortVersionString</key>
+    <string>1.0</string>
+    
+    <key>CFBundleVersion</key>
+    <string>1</string>
+    
+    <!-- Supported Interfaces -->
+    <key>UISupportedInterfaceOrientations</key>
+    <array>
+        <string>UIInterfaceOrientationPortrait</string>
+        <string>UIInterfaceOrientationLandscapeLeft</string>
+        <string>UIInterfaceOrientationLandscapeRight</string>
+    </array>
+    
+    <!-- Background Modes (if needed for continuous BLE) -->
+    <key>UIBackgroundModes</key>
+    <array>
+        <string>bluetooth-central</string>
+    </array>
+</dict>
+</plist>
