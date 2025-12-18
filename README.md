@@ -12,6 +12,43 @@ An IoT smart helmet system that automatically enhances cyclist visibility and sa
 - 3.7V LiPo battery (2500mAh recommended)
 - 100nF ceramic capacitor (for IMU decoupling)
 
+- ## System Architecture
+
+```
+┌─────────────────────┐
+│   ESP32-C3 Helmet   │
+│  ┌──────────────┐   │
+│  │  MPU6500 IMU │   │ 50Hz @ ±8g
+│  │  (I²C 400kHz)│───┤
+│  └──────────────┘   │
+│  ┌──────────────┐   │
+│  │ WS2812B LEDs │◄──┤ Brake/Crash/Turn Signals
+│  │  (12x RGB)   │   │
+│  └──────────────┘   │
+│  ┌──────────────┐   │
+│  │Random Forest │   │ Local ML Inference
+│  │  Classifier  │   │ (77.8% accuracy)
+│  └──────────────┘   │
+└──────┬──────────────┘
+       │ BLE 5.0 (28-byte packets @ 10Hz)
+       │
+┌──────▼──────────────┐
+│    iOS App (Swift)  │
+│  ┌──────────────┐   │
+│  │CoreLocation  │   │ GPS (1-5Hz adaptive)
+│  │CoreBluetooth │   │
+│  └──────────────┘   │
+│  ┌──────────────┐   │
+│  │   MapKit     │   │ Navigation
+│  │ OpenMeteo API│   │ Weather (5min polling)
+│  └──────────────┘   │
+│  ┌──────────────┐   │
+│  │  InfluxDB    │◄──┤ Cloud Storage
+│  │   (HTTPS)    │   │ (Labeled events, GPS, Weather)
+│  └──────────────┘   │
+└─────────────────────┘
+```
+
 
 ## Repository Structure
 
