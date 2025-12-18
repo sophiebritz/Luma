@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <!-- App Information -->
+    <key>CFBundleDevelopmentRegion</key>
+    <string>$(DEVELOPMENT_LANGUAGE)</string>
+    <key>CFBundleDisplayName</key>
+    <string>Luma Helmet</string>
+    <key>CFBundleExecutable</key>
+    <string>$(EXECUTABLE_NAME)</string>
+    <key>CFBundleIdentifier</key>
+    <string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+    <key>CFBundleInfoDictionaryVersion</key>
+    <string>6.0</string>
+    <key>CFBundleName</key>
+    <string>$(PRODUCT_NAME)</string>
+    <key>CFBundlePackageType</key>
+    <string>$(PRODUCT_BUNDLE_PACKAGE_TYPE)</string>
+    <key>CFBundleShortVersionString</key>
+    <string>1.0.0</string>
+    <key>CFBundleVersion</key>
+    <string>1</string>
+    
+    <!-- iOS Version -->
+    <key>LSRequiresIPhoneOS</key>
+    <true/>
+    <key>MinimumOSVersion</key>
+    <string>17.0</string>
+    
+    <!-- Supported Orientations -->
+    <key>UISupportedInterfaceOrientations</key>
+    <array>
+        <string>UIInterfaceOrientationPortrait</string>
+        <string>UIInterfaceOrientationLandscapeLeft</string>
+        <string>UIInterfaceOrientationLandscapeRight</string>
+    </array>
+    <key>UISupportedInterfaceOrientations~ipad</key>
+    <array>
+        <string>UIInterfaceOrientationPortrait</string>
+        <string>UIInterfaceOrientationPortraitUpsideDown</string>
+        <string>UIInterfaceOrientationLandscapeLeft</string>
+        <string>UIInterfaceOrientationLandscapeRight</string>
+    </array>
+    
+    <!-- Launch Screen -->
+    <key>UILaunchScreen</key>
+    <dict>
+        <key>UIColorName</key>
+        <string>AccentColor</string>
+        <key>UIImageName</key>
+        <string>LaunchIcon</string>
+    </dict>
+    
+    <!-- App Requirements -->
+    <key>UIRequiredDeviceCapabilities</key>
+    <array>
+        <string>bluetooth-le</string>
+        <string>location-services</string>
+        <string>gps</string>
+    </array>
+    
+    <!-- Bluetooth Permission -->
+    <key>NSBluetoothAlwaysUsageDescription</key>
+    <string>Luma Helmet needs Bluetooth to connect to your smart helmet for safety features including crash detection, brake lights, and turn signals.</string>
+    <key>NSBluetoothPeripheralUsageDescription</key>
+    <string>Luma Helmet needs Bluetooth to connect to your smart helmet for safety features including crash detection, brake lights, and turn signals.</string>
+    
+    <!-- Location Permissions -->
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>Luma Helmet needs your location for turn-by-turn navigation, weather forecasts, and ride tracking to calculate your safety score.</string>
+    <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+    <string>Luma Helmet needs your location for turn-by-turn navigation, weather forecasts, and ride tracking to calculate your safety score. Background location enables navigation when the app is not in the foreground.</string>
+    
+    <!-- Background Modes -->
+    <key>UIBackgroundModes</key>
+    <array>
+        <string>bluetooth-central</string>
+        <string>location</string>
+    </array>
+    
+    <!-- Scene Configuration -->
+    <key>UIApplicationSceneManifest</key>
+    <dict>
+        <key>UIApplicationSupportsMultipleScenes</key>
+        <false/>
+        <key>UISceneConfigurations</key>
+        <dict/>
+    </dict>
+</dict>
+</plist>
